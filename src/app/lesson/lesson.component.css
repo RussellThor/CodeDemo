@@ -1,0 +1,7 @@
+.letterButton {
+  float: left;
+  margin-right:5px; 
+}
+.letterButtonCurrent {
+  background: red;
+}

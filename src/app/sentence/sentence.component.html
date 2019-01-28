@@ -1,0 +1,6 @@
+<div *ngFor="let word of words; index as wordIndex" class="enclosingWord">
+  <button *ngFor="let sound of word; index as i" class="btn btn-primary letterButton" [class.letterButtonCurrent]="sound.isSelected"
+    (click)="letterClicked($event, wordIndex, i)"> {{sound.letters}}
+  </button>
+</div>
+

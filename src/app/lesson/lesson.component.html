@@ -1,0 +1,17 @@
+<h4>The sentence being practiced is </h4>
+<h4><i>Expensive rings on thin fingers</i></h4>
+<br>
+<br>
+<div>
+  <h4>Your difficult sounds</h4>
+  <button *ngFor="let difficultSound of difficultSounds; index as i" class="btn btn-primary letterButton" [class.letterButtonCurrent]="difficultSound.isSelected"
+    (click)="difficultSoundClicked(i, difficultSound.soundNum, difficultSound.isSelected)"> {{difficultSound.letters}}
+  </button>
+</div>
+<br>
+<br>
+<div>
+  <button (click)='showSoundLightupInTime()' class="btn btn-primary">Sound playback in time</button>
+</div>
+<br><br>
+<sentence #currentSentence  (letter-clicked-for-lesson)="deSelectDifficultSounds()"></sentence>
